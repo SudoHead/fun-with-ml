@@ -20,5 +20,18 @@ A standard ResNet with the following structure:
 ![alt text](resnet50_blocks.png)
 
 ## Result
+Training after 2000 epochs with a GTX 1080:
+- Baseline:
+    - epoch time: ~1s
+    - loss: 0.1125 
+    - mae: 0.1598 
+    - val_loss: 2.6752 
+    - val_mae: 0.8954
+- ResNet-50:
+    - epoch time: ~10s
+    - loss: 0.0955 
+    - mae: 0.1079 
+    - val_loss: 2.7508 
+    - val_mae: 0.7765
 
 ![alt text](result.png)
