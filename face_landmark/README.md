@@ -29,7 +29,32 @@ Training after 2000 epochs with a GTX 1080:
     - val_mae: 0.8954
 - ResNet-50:
     - epoch time: ~10s
-    - loss: 0.0955 
+    - loss: 0.0955 import praw
+import pandas as pd
+from tqdm import tqdm
+
+reddit = praw.Reddit(client_id = 'b1pL2McByh6fAQ',
+                    client_secret = '409PPLrvLmZp14C6Q48RVr_3Bmr0bA',
+                    username = 'yourejokeguy',
+                    password = 'yo-5mmL8#~H}',
+                    user_agent = 'joker')
+# %%
+rjokes = reddit.subreddit('jokes')
+
+# %%
+top = rjokes.top(limit=100000)
+
+# %%
+jokeset = pd.DataFrame(columns=['Title', 'Text'])
+
+pbar = tqdm(top, desc='Getting the jokes...')
+
+for submission in pbar:
+    pbar.set_description(submission.title)
+    jokeset = jokeset.append({'Title': submission.title, 'Text': submission.selftext}, ignore_index=True)
+    # print(submission.title, end='\n\n')
+    # print(submission.selftext)
+    # print('----------------------------------------------------------\n\n')
     - mae: 0.1079 
     - val_loss: 2.7508 
     - val_mae: 0.7765
