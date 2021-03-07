@@ -2,3 +2,9 @@ pandas
 numpy
 praw
 tqdm
+transformers
+matplotlib
+pandas_datareader
+seaborn
+scikit-learn
+keras
