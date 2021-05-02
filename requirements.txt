@@ -8,3 +8,6 @@ pandas_datareader
 seaborn
 scikit-learn
 keras
+tensorflow
+mediapipe
+open-cv
