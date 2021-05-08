@@ -35,3 +35,7 @@ Training after 2000 epochs with a GTX 1080:
     - val_mae: 0.7765
 
 ![alt text](result.png)
+
+
+# Real-time landmark dectection using mediapipe library
+Run ```python rt_face.py```using the webcam to detect face landmarks in real-time!
